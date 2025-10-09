@@ -1,86 +1,88 @@
 //Maya ASCII 2025ff03 scene
 //Name: Maya ascii.ma
-//Last modified: Sun, Oct 05, 2025 02:32:42 PM
+//Last modified: Thu, Oct 09, 2025 05:42:03 PM
 //Codeset: 1252
+file -rdi 1 -ns "Chest" -rfn "ChestRN" -op "v=0;" -typ "mayaAscii" "C:/Users/bridg/OneDrive/Documents/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Chest.ma";
+file -r -ns "Chest" -dr 1 -rfn "ChestRN" -op "v=0;" -typ "mayaAscii" "C:/Users/bridg/OneDrive/Documents/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Chest.ma";
 requires maya "2025ff03";
+requires -nodeType "MaterialXSurfaceShader" -dataType "MxDocumentStackData" "LookdevXMaya" "1.6.0";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
 		 "mtoa" "5.4.8.2";
-requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202505300603-a12e894a3d";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 26100)";
-fileInfo "UUID" "B2B09DC6-4AE4-B9E5-1B5C-0AB7C4820D6E";
+fileInfo "UUID" "6A897C47-4DE1-F63C-DE7D-C5B612FA971A";
 createNode transform -s -n "persp";
 	rename -uid "285AA594-48B8-A0C1-DD09-C3BDBA31D0A1";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -39.592406869524538 22.978241684076902 10.457448175747281 ;
-	setAttr ".r" -type "double3" -24.599999999992257 -434.99999999975671 -6.1443598174030545e-15 ;
+	setAttr ".t" -type "double3" -14.020529153419439 9.4451041234809079 -18.68633629821192 ;
+	setAttr ".r" -type "double3" -13.799999999998734 -512.99999999970441 0 ;
 	setAttr ".rp" -type "double3" -2.2204460492503131e-16 8.8817841970012523e-16 0 ;
 	setAttr ".rpt" -type "double3" 2.0544364414095054e-14 2.1825559080669665e-14 5.7581832181920568e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "57485112-4AC0-00F1-7CE6-C995655E5CAF";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 45.686897901967157;
+	setAttr ".coi" 34.662051783995892;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 0.5323231965303421 3.9596636295318604 -0.29394084215164185 ;
+	setAttr ".tp" -type "double3" 1.2614750952017308 1.1770450646777642 11.306285784919528 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "95075B1F-4A1B-FE22-64CA-7785CB4B3292";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.5323231965303421 1000.3225577788575 -0.29394084215164185 ;
+	setAttr ".t" -type "double3" 1.2614750952017308 1000.3901617205651 11.306285784919528 ;
 	setAttr ".r" -type "double3" -90 0 0 ;
 createNode camera -s -n "topShape" -p "top";
 	rename -uid "07756B2D-4E68-697B-6F03-F096DC432C86";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
-	setAttr ".coi" 996.3628941493256;
-	setAttr ".ow" 2.2212004661560059;
+	setAttr ".coi" 999.21311665588735;
+	setAttr ".ow" 3.9120552059056886;
 	setAttr ".imn" -type "string" "top";
 	setAttr ".den" -type "string" "top_depth";
 	setAttr ".man" -type "string" "top_mask";
-	setAttr ".tp" -type "double3" 0.5323231965303421 3.9596636295318604 -0.29394084215164185 ;
+	setAttr ".tp" -type "double3" 1.2614750952017308 1.1770450646777642 11.306285784919528 ;
 	setAttr ".hc" -type "string" "viewSet -t %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -s -n "front";
 	rename -uid "A7AC5CA1-4558-6BEB-4904-1AA00E888525";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.5323231965303421 3.9596636295318604 1000.3029008489729 ;
+	setAttr ".t" -type "double3" 1.2614750952017308 1.1770450646777642 1000.3070841853678 ;
 createNode camera -s -n "frontShape" -p "front";
 	rename -uid "534C0532-4FE1-8C3D-FA1C-6DB8311C82E5";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
-	setAttr ".coi" 1000.5968416911245;
-	setAttr ".ow" 2.069028647322404;
+	setAttr ".coi" 989.00079840044828;
+	setAttr ".ow" 3.9120552059056886;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
-	setAttr ".tp" -type "double3" 0.5323231965303421 3.9596636295318604 -0.29394084215164185 ;
+	setAttr ".tp" -type "double3" 1.2614750952017308 1.1770450646777642 11.306285784919528 ;
 	setAttr ".hc" -type "string" "viewSet -f %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -s -n "side";
 	rename -uid "D82D061F-4C71-8B26-AD00-BDA86E41631B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1000.3461391371495 3.9596636295318604 -0.29394084215164185 ;
+	setAttr ".t" -type "double3" 1000.4173559004386 1.1770450646777642 11.306285784919528 ;
 	setAttr ".r" -type "double3" 0 90 0 ;
 createNode camera -s -n "sideShape" -p "side";
 	rename -uid "0CFD4C9E-46FB-C54A-6D17-63924AA88C9F";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
-	setAttr ".coi" 999.81381594061918;
-	setAttr ".ow" 2.2212004661560059;
+	setAttr ".coi" 999.15588080523685;
+	setAttr ".ow" 2.4891710201134241;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
-	setAttr ".tp" -type "double3" 0.5323231965303421 3.9596636295318604 -0.29394084215164185 ;
+	setAttr ".tp" -type "double3" 1.2614750952017308 1.1770450646777642 11.306285784919528 ;
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
@@ -16356,20 +16358,20 @@ createNode mesh -n "Crn3_labelShape" -p "Crn3_label";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "B8502958-42FF-303B-4375-399DC3DF4620";
-	setAttr -s 2 ".lnk";
-	setAttr -s 2 ".slnk";
+	rename -uid "428D07A2-4AFE-95CA-C216-8BA60F430272";
+	setAttr -s 4 ".lnk";
+	setAttr -s 4 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "13805A55-4B64-B175-1765-1AABCAB9B647";
+	rename -uid "5E362794-4576-60CD-69A5-2ABE5FBD2BD7";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "8267FC16-4B21-2D50-6E82-3AA28336CD19";
+	rename -uid "0358F0C9-4CE8-6015-FB4C-AFB7A6D2701D";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "3F7B9AFD-41D6-F804-D4B3-D1ACC439C443";
+	rename -uid "0402DD54-454D-8D9B-775A-AA8EC7F97438";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "2F84AEA6-42A4-9948-1F80-0E990A34C603";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "CC05C2F7-4119-6FF3-5F1A-5793F88A10E8";
+	rename -uid "8E5226ED-4961-33E2-ACC5-39B725703B08";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "304F413E-44E6-E675-CE45-99A1616FD297";
 	setAttr ".g" yes;
@@ -16555,6 +16557,38 @@ createNode transformGeometry -n "transformGeometry12";
 	setAttr ".txf" -type "matrix" -0.0014954134156129374 0.20250877504355569 0.097939247436282212 0
 		 -0.3592363612449227 -0.00057060104489959013 -0.0043058482020897574 0 -0.0024257100136727771 -0.10072645310448015 0.20823483158580605 0
 		 0.35817973491559474 3.8347391801121029 0 1;
+createNode reference -n "ChestRN";
+	rename -uid "358BC2D2-41D1-852F-ADAC-FD83C9FC8BD3";
+	setAttr -s 2 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"ChestRN"
+		"ChestRN" 0
+		"ChestRN" 6
+		2 "|Chest:group1" "translate" " -type \"double3\" -9.14925508596493664 -0.068666535351036617 10.97370985487696515"
+		
+		2 "|Chest:group1" "rotate" " -type \"double3\" 0 -90.59910787158477774 0"
+		
+		2 "|Chest:group1" "scale" " -type \"double3\" 1.55902094745176201 1.55902094745176201 1.55902094745176201"
+		
+		3 "|Chest:group1|Chest:polySurface2|Chest:polySurfaceShape2.instObjGroups" 
+		"Chest:Maya_Lambert1SG.dagSetMembers" "-na"
+		5 3 "ChestRN" "|Chest:group1|Chest:polySurface2|Chest:polySurfaceShape2.instObjGroups" 
+		"ChestRN.placeHolderList[1]" "Chest:Maya_Lambert1SG.dsm"
+		5 3 "ChestRN" "|Chest:materialXStack1|Chest:materialXStackShape1.stack" 
+		"ChestRN.placeHolderList[2]" "";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode MaterialXSurfaceShader -n "Maya_Lambert1";
+	rename -uid "CC05891B-4AB2-AFD0-26F3-96BEFEC1CF4B";
+	setAttr ".up" -type "string" "|Chest:materialXStack1|Chest:materialXStackShape1,%document2%Maya_Lambert1";
+createNode shadingEngine -n "Maya_Lambert1SG";
+	rename -uid "4077AFA0-4881-186F-229C-BB94AEEFE699";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo1";
+	rename -uid "1CDA3868-4EA9-A72A-E5AD-289153A6B190";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -16566,19 +16600,21 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
-	setAttr -s 2 ".st";
+	setAttr -s 4 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 5 ".s";
+	setAttr -s 7 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
+	setAttr -s 2 ".r";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 50 ".dsm";
+	setAttr -s 75 ".dsm";
 	setAttr ".ro" yes;
+	setAttr -s 16 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
@@ -16599,6 +16635,8 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+connectAttr "ChestRN.phl[1]" "Maya_Lambert1SG.dsm" -na;
+connectAttr "ChestRN.phl[2]" "Maya_Lambert1.sk";
 connectAttr "groupId9.id" "BS_SetShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "BS_SetShape.iog.og[0].gco";
 connectAttr "groupId8.id" "BS_SetShape.ciog.cog[0].cgid";
@@ -16616,8 +16654,10 @@ connectAttr "transformGeometry11.og" "Crn1_tipShape.i";
 connectAttr "transformGeometry12.og" "Crn1_labelShape.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Maya_Lambert1SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Maya_Lambert1SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr ":defaultArnoldDenoiser.msg" ":defaultArnoldRenderOptions.imagers" -na
@@ -16642,6 +16682,12 @@ connectAttr "polySphere8.out" "transformGeometry9.ig";
 connectAttr "polyCylinder2.out" "transformGeometry10.ig";
 connectAttr "polyBevel2.out" "transformGeometry11.ig";
 connectAttr "polyCylinder1.out" "transformGeometry12.ig";
+connectAttr "Maya_Lambert1.oc" "Maya_Lambert1SG.ss";
+connectAttr "Maya_Lambert1SG.msg" "materialInfo1.sg";
+connectAttr "Maya_Lambert1.msg" "materialInfo1.m";
+connectAttr "Maya_Lambert1.msg" "materialInfo1.t" -na;
+connectAttr "Maya_Lambert1SG.pa" ":renderPartition.st" -na;
+connectAttr "Maya_Lambert1.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "Tbl_topShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "Tbl_legShape3.iog" ":initialShadingGroup.dsm" -na;
